@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextToSpeech_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qtw-vA-Jwu">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="gE5-xc-UK2"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="pause" id="BaX-Mj-mdi">
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="ASA-nO-v7f"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kJf-GO-vpd"/>
+                                    <barButtonItem systemItem="play" id="84X-sB-d1L">
+                                        <connections>
+                                            <action selector="play:" destination="BYZ-38-t0r" id="VnD-2p-757"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Nxv-PR-zen"/>
+                                    <barButtonItem title="Stop" id="Z4t-Nk-gtv">
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" id="f0f-tT-MP1"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ht1-26-drr">
+                                <rect key="frame" x="0.0" y="53" width="320" height="402"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="402" id="c5l-CT-yLU"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1960784314" green="0.23529411759999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qtw-vA-Jwu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3pd-ed-mHe"/>
+                            <constraint firstAttribute="trailing" secondItem="Qtw-vA-Jwu" secondAttribute="trailing" id="HPQ-5J-4Qj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qtw-vA-Jwu" secondAttribute="bottom" id="J7f-cs-2uV"/>
+                            <constraint firstAttribute="trailing" secondItem="ht1-26-drr" secondAttribute="trailing" id="cjm-uJ-nGB"/>
+                            <constraint firstItem="ht1-26-drr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="33" id="lik-sd-dnD"/>
+                            <constraint firstItem="ht1-26-drr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vhN-K7-uPy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="ht1-26-drr" id="0F4-Hb-kKE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="377"/>
+        </scene>
+    </scenes>
+</document>
